@@ -1,0 +1,50 @@
+def CheckWinner():
+    winner=1
+    if((1 in P1)and(2 in P1)and(3 in P1)):
+        winner=1
+    if((1 in P2)and(2 in P2)and(3 in P2)):
+        winner=2
+
+    if ((4 in P1) and (5 in P1) and (6 in P1)):
+        winner = 1
+    if ((4 in P2) and (5 in P2) and (6 in P2)):
+        winner = 2
+
+    if ((7 in P1) and (8 in P1) and (9 in P1)):
+        winner = 1
+    if ((7 in P2) and (8 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((1 in P1) and (4 in P1) and (7 in P1)):
+        winner = 1
+    if ((1 in P2) and (4 in P2) and (7 in P2)):
+        winner = 2
+
+    if ((1 in P1) and (5 in P1) and (9 in P1)):
+        winner = 1
+    if ((1 in P2) and (5 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((2 in P1) and (5 in P1) and (8 in P1)):
+        winner = 1
+    if ((2 in P2) and (5 in P2) and (8 in P2)):
+        winner = 2
+
+    if ((3 in P1) and (6 in P1) and (9 in P1)):
+        winner = 1
+    if ((3 in P2) and (6 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((3 in P1) and (5 in P1) and (7 in P1)):
+        winner = 1
+    if ((3 in P2) and (5 in P2) and (7 in P2)):
+        winner = 2
+
+
+    if winner ==1:
+        messagebox.showinfo(title = "Congratulations.",message = "Player 1 is the winner")
+
+    if winner ==2:
+        messagebox.showinfo(title = "Congratulations.",message = "Player 2 is the winner")
+
+root.mainloop()

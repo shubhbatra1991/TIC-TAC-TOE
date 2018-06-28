@@ -1,0 +1,174 @@
+from Tkinter import *
+from Tkinter import ttk
+from Tkinter import messagebox
+
+root=Tk()
+root.title("Tic Tac Toe : Player1")
+#global variable
+AcrivePlayer=1
+P1=[]    #what player one selects
+P2=[]    #what player2 selects
+root.title("Tic Tac Toe : Player1")
+style= ttk.style()
+style.theme_use('classic')
+
+def Autoplay():
+    global P1
+    global P2
+    emptycells= []
+
+    for cell in range():
+        if(not((cell+1 in P1) or (cell+1 in P2))):
+            emptycells.append(cell t1)
+
+    RandIndex =randint(0,len(emptycells)-1)
+    ButtonClick(emptycells[RandIndex])
+
+#add buttons
+
+bu1 =ttk.button(root,text='')
+bu1.grid(row=0,column=0,sticky='snew',ipadx=40,ipad=40)
+bu1.config(command=lambda: ButtonClick(1))
+
+bu2 =ttk.button(root,text='')
+bu2.grid(row=0,column=1,sticky='snew',ipadx=40,ipad=40)
+bu2.config(command=lambda: ButtonClick(2))
+
+bu3 =ttk.button(root,text='')
+bu3.grid(row=0,column=2,sticky='snew',ipadx=40,ipad=40)
+bu3.config(command=lambda: ButtonClick(3))
+
+
+bu4 =ttk.button(root,text='')
+bu4.grid(row=1,column=0,sticky='snew',ipadx=40,ipad=40)
+bu4.config(command=lambda: ButtonClick(4))
+
+bu5 =ttk.button(root,text='')
+bu5.grid(row=1,column=1,sticky='snew',ipadx=40,ipad=40)
+bu5.config(command=lambda: ButtonClick(5))
+
+bu6 =ttk.button(root,text='')
+bu6.grid(row=1,column=2,sticky='snew',ipadx=40,ipad=40)
+bu6.config(command=lambda: ButtonClick(6))
+
+bu7 =ttk.button(root,text='')
+bu7.grid(row=2,column=0,sticky='snew',ipadx=40,ipad=40)
+bu7.config(command=lambda: ButtonClick(7))
+
+bu8=ttk.button(root,text='')
+bu8.grid(row=2,column=1,sticky='snew',ipadx=40,ipad=40)
+bu8.config(command=lambda: ButtonClick(8))
+
+bu9 =ttk.button(root,text='')
+bu9.grid(row=2,column=2,sticky='snew',ipadx=40,ipad=40)
+bu9.config(command=lambda: ButtonClick(9))
+
+def ButtonClick(id):
+    print("ID:{}".format(id))
+
+
+def ButtonClick(id):
+    global ActivePlayer
+    global P1
+    global P2
+
+
+if (Active_Player == 1):
+    set_layout(id, "X")
+    P1.append(id)
+    root.title("Tic Tac Toe: Player2 ")
+    Active_Player = 2
+    print("P1:{}".format(P1))
+    Autoplay()
+
+elif (Active Player == 2):
+    set_layout(id, "0")
+    P2.append(id)
+    root.title("Tic Tac Toe: Player1 ")
+    Active_Player = 1
+    print("P2:{}".format(P2))
+
+
+def Setlayout(id, PlayerSymbol):
+    if id == 1:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 2:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 3:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 4:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 5:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 6:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 7:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 8:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 9:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+
+    CheckWinner()
+
+
+def CheckWinner():
+    winner = 1
+    if ((1 in P1) and (2 in P1) and (3 in P1)):
+        winner = 1
+    if ((1 in P2) and (2 in P2) and (3 in P2)):
+        winner = 2
+
+    if ((4 in P1) and (5 in P1) and (6 in P1)):
+        winner = 1
+    if ((4 in P2) and (5 in P2) and (6 in P2)):
+        winner = 2
+
+    if ((7 in P1) and (8 in P1) and (9 in P1)):
+        winner = 1
+    if ((7 in P2) and (8 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((1 in P1) and (4 in P1) and (7 in P1)):
+        winner = 1
+    if ((1 in P2) and (4 in P2) and (7 in P2)):
+        winner = 2
+
+    if ((1 in P1) and (5 in P1) and (9 in P1)):
+        winner = 1
+    if ((1 in P2) and (5 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((2 in P1) and (5 in P1) and (8 in P1)):
+        winner = 1
+    if ((2 in P2) and (5 in P2) and (8 in P2)):
+        winner = 2
+
+    if ((3 in P1) and (6 in P1) and (9 in P1)):
+        winner = 1
+    if ((3 in P2) and (6 in P2) and (9 in P2)):
+        winner = 2
+
+    if ((3 in P1) and (5 in P1) and (7 in P1)):
+        winner = 1
+    if ((3 in P2) and (5 in P2) and (7 in P2)):
+        winner = 2
+
+    if winner == 1:
+        messagebox.showinfo(title="Congratulations.", message="Player 1 is the winner")
+
+    if winner == 2:
+        messagebox.showinfo(title="Congratulations.", message="Player 2 is the winner")
+
+
+root.mainloop()
+

@@ -1,0 +1,52 @@
+def ButtonClick(id):
+    global  ActivePlayer
+    global P1
+    global P2
+
+if (Active_Player ==1):
+    set_layout(id,"X")
+    P1.append(id)
+    root.title("Tic Tac Toe: Player2 ")
+    Active_Player=2
+    print("P1:{}".format(P1))
+    Autoplay()
+
+elif (Active Player ==2)
+    set_layout(id, "0")
+    P2.append(id)
+    root.title("Tic Tac Toe: Player1 ")
+    Active_Player = 1
+    print("P2:{}".format(P2))
+
+
+def Setlayout(id,PlayerSymbol):
+    if id ==1:
+        bu1.config(text==PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id==2:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 3:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 4:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 5:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 6:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 7:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 8:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+    elif id == 9:
+        bu1.config(text == PlayerSymbol)
+        bu1.state(['disabled'])
+
+    CheckWinner()
+
